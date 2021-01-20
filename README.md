@@ -1,5 +1,7 @@
 # Discord-FiveM-API
 
+**[SUPPORTS V11 + V12]** - Discord-js
+
 My previous status bots utilised the `gamedig` api which has since been causing issues for both myself and other people that i know use my code.
 
 I decided to find a new api and then make a new bot.
