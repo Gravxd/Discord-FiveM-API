@@ -1,3 +1,5 @@
+const Discord = require('discord.js')
+
 const serverID = '742798585086607401';
 const channelID = '790630359678451742';
 const messageID = '800252423557742622';
@@ -30,4 +32,19 @@ client.on('ready', () => {
 
   })
 }, 15000)
+})
+
+
+client.on('message', message => {
+if(message.author.bot || !message.guild) return;
+if(message.content === 'grav!setup') {
+const setup_embed = new Discord.RichEmbed()
+.setDescription(`Setting up`);
+  message.channel.send(setup_embed).then(msg => {
+  const setupDone = new Discord.RichEmbed()
+  .setDescription(`Server ID: ${message.guild.id}\nMessage ID: ${msg.id}\nChannel ID: ${message.channel.id}`)
+  msg.edit(setupDone)
+  })
+
+}
 })
