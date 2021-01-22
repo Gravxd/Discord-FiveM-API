@@ -11,7 +11,7 @@ client.on('ready', () => {
     server.players.forEach(p => {
       sPlayers.push(`\`${p.name}\``)
     })
-    if(sPlayers.length === 0) sPlayers = [];
+    if(!sPlayers.lengths) sPlayers = [];
     const embed = new RichEmbed()
     .setTitle(`__**Lucaas Flight Simulator**__`)
     .setColor('#25e4ef')
